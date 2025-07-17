@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lav's Pixel World</title>
+
+  <!-- Pixel font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+
+  <!-- 🌸 Loading overlay -->
+  <div id="loading-overlay">
+    <div class="loading-wrapper">
+      <div class="loading-icon"></div>
+      <div class="loading-text">Loading Lav’s Pixel World… 🌸</div>
+    </div>
+  </div>
+
+  <!-- 🌸 Falling flowers/hearts container -->
+  <div class="falling-flowers"></div>
+
+  <!-- 🌸 Main container -->
+  <div class="container">
+    <!-- Flower decorations -->
+    <img src="assets/flower1.jpg" class="flower flower1" alt="Flower1" />
+    <img src="assets/flower2.jpg" class="flower flower2" alt="Flower2" />
+    <img src="assets/flower3.jpg" class="flower flower3" alt="Flower3" />
+
+    <!-- Header -->
+    <div class="header">
+      <img src="assets/avatar.png" alt="Pixel Avatar" class="avatar" />
+      <h1>Lav’s portfolio</h1>
+      <p class="subtitle">Aspiring ML Engineer,Cs Undergraduate interested in ml and web dev</p>
+    </div>
+
+    <!-- Nav -->
+    <div class="nav">
+      <button data-section="about">about</button>
+      <button data-section="projects">projects</button>
+      <button data-section="skills">skills</button>
+      <button data-section="certificates">certificates</button>
+      <button data-section="education">education</button>
+      <button data-section="experience">experience</button>
+      <button data-section="contact">contact</button>
+      <button data-section="resume">resume</button>
+    </div>
+
+    <!-- Content area -->
+    <div class="content">
+      <!-- Add your sections here exactly as you have them -->
+      <!-- ABOUT -->
+      <section id="about" class="section hidden">
+        <h2>About Me</h2>
+        <p>
+          Hey! I'm Lavanya — a Computer Science undergrad passionate about AIML and web dev.
+        </p>
+        <p>
+          I love building real-world tech: from a voice-controlled Arduino car that stops at red lights 🚗, to an AI model detecting spice adulteration using CNNs 🌶️.
+        </p>
+        <p>
+          Math, especially linear algebra and quantum physics, inspires me — shoutout to matrix magic and image pixels 📐🖼️.
+        </p>
+        <p>
+          I'm currently researching at PESU’s AI Lab-Centre for Cognitive and Computational Intelligence, exploring how AI blends with real-world logic.
+        </p>
+        <p>
+          Always curious. Always creating. Let’s build cool things together 🌸
+        </p>
+      </section>
+      
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section hidden">
+        <h2>Projects</h2>
+        <ul>
+          <li><button class="project-btn" data-project="blossom">AI-Deep Learning Based Spice Adulteration Detector</button></li>
+          <li><button class="project-btn" data-project="beetask">Movie Booking Platform</button></li>
+          <li><button class="project-btn" data-project="honeydrop">Smart Voice-Controlled Car – Arduino,</button></li>
+        </ul>
+      </section>
+
+      <!-- Project Details -->
+      <section id="blossom" class="section hidden">
+        <h2><b>AI-Based Visual Detection of Spice Adulteration Using Deep Learning (Ongoing)</b></h2>
+
+        <p>Building an AI-powered system to detect spice adulteration (e.g., turmeric, chili) using CNNs and transfer
+          learning (ResNet-50, MobileNetV2). Conducting data cleaning, labeling, and EDA on RGB image datasets with
+          adulteration levels. Supporting model training, augmentation, and evaluation; achieving over 90% validation
+          accuracy. Assisting in model optimization and mobile deployment using knowledge distillation.</p>
+        <button class="back-btn">⬅️ Back to Projects</button>
+      </section>
+
+      <section id="beetask" class="section hidden">
+        <h2><b>Movie Booking Platform –</b> Python, MySQL, Tkinter</h2>
+        <p>Developed a BookMyShow-inspired ticket booking system with a responsive UI using Python Tkinter.
+          Implemented seat selection and fast search functionality via trie trees. Managed dynamic bookings and
+          movie data using MySQL queries. Integrated QR code generation for simulated payment and ticket
+          confirmation.</p>
+        <button class="back-btn">⬅️ Back to Projects</button>
+      </section>
+
+      <section id="honeydrop" class="section hidden">
+        <h2><b>Smart Voice-Controlled Car – Arduino, C/C++</b></h2>
+        <p>Designed a dual-mode robotic car operable via voice commands and manual joystick controls through a
+          Bluetooth-connected mobile app. Enabled directional movement, real-time obstacle avoidance using ultrasonic
+          sensors, and automatic halting at red traffic lights using LDR-based detection. Simulated real-world RC vehicle
+          behavior with both user control and autonomous safety features.</p>
+        <button class="back-btn">⬅️ Back to Projects</button>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section hidden">
+        <h2>Skills</h2>
+        <ul>
+          <li>💻 <b>Languages:</b> C, Java, Python, JavaScript, HTML, CSS, SQL</li>
+          <li>⚙️ <b>Technologies & Tools:</b> ReactJS, OpenCV,pandas,numpy,keras,tensorflow,pytorch</li>
+          <li>🎨 <b>Design:</b> UI/UX,Canva</li>
+        </ul>
+      </section>
+
+      <!-- CERTIFICATES -->
+      <section id="certificates" class="section hidden">
+        <h2>Certificates and Awards</h2>
+        <ul>
+          <li>1. <strong>CNR Award</strong> — Top 20% in the department, 40% off on all semesters</li>
+          <li>2.<strong>AI Fundamentals Course</strong> — Free Code Camp</li>
+          <li>3. <strong>Deep Learning Course</strong> — Codebasics</li>
+        </ul>
+      </section>
+      
+
+      <!-- EDUCATION -->
+      <section id="education" class="section hidden">
+        <h2>Education</h2>
+      
+        <div class="edu-entry">
+          <button class="edu-btn">
+            <b>🎓 B.E. in Computer Science — PES University, Bangalore</b><br/>
+            <small>CGPA: 8.7</small><br/>
+            <a href="assets/PES_GPA_Certificate.pdf" target="_blank" download>📄 View CGPA Certificate</a>
+          </button>
+        </div>
+      
+        <div class="edu-entry">
+          <button class="edu-btn">
+            <b>🧪 12th Grade (PCMC - CBSE) — Delhi Public School, Bangalore</b><br/>
+            Grade: 93% | JEE Percentile: 93%<br/>
+            <a href="assets/DPS_12th_Certificate.pdf" target="_blank" download>📄 View 12th Grade Certificate</a><br/>
+            <a href="assets/JEE_Percentile_Certificate.pdf" target="_blank" download>📄 View JEE Percentile Certificate</a>
+          </button>
+        </div>
+      
+        <div class="edu-entry">
+          <button class="edu-btn">
+            <b>🏫 10th Grade (ICSE) — Baldwin Girls’ High School, Bangalore</b><br/>
+            <small>Grade: 97.8%</small><br/>
+            <a href="assets/Baldwin_10th_Certificate.pdf" target="_blank" download>📄 View Certificate</a>
+          </button>
+        </div>
+      </section>
+      
+      
+          
+        </div>
+        
+        
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section hidden">
+        <h2>Experience</h2>
+        <div class="pretty-box">
+          <ul>
+            <li>
+              <strong>1.Research Intern</strong> — Centre for Cognitive and Computational Intelligence (AI Research Lab)
+            </li>
+            <li>
+              <strong>2.Logistics Executive</strong> — PESU I/O
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+
+      <!-- CONTACT -->
+      <section id="contact" class="section hidden">
+        <h2>Contact</h2>
+        <p>📧 Email: <a href="mailto:lavanya.senthil1104@gmail.com">lavanya.senthil1104@gmail.com</a></p>
+        <p>📱 Phone: <a href="tel:+919535171980">+91 9535171980</a></p>
+        <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/lavanya-senthil-07aa87244/" target="_blank">View my profile</a></p>
+      </section>
+
+      <section id="resume" class="section hidden">
+        <h2>Resume</h2>
+        <p>You can download my resume here:</p>
+        <p>
+          📄 <a href="assets/Lavanya_senthil_resume_updated.pdf" download target="_blank">
+            Download My Resume (PDF)
+          </a>
+        </p>
+      </section>
+      
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="bg-music" src="assets/bg.mp3" ></audio>
+  <audio id="click-sound" src="assets/click.mp3"></audio>
+  <audio id="bg-music" src="assets/bg.mp3" loop></audio>
+
+
+  <script src="portfolio.js"></script>
+</body>
+</html>
