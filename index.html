@@ -3,215 +3,311 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lav's Pixel World</title>
+  <title>Lavanya Senthil — Portfolio</title>
 
-  <!-- Pixel font -->
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="portfolio.css" />
 </head>
 <body>
 
-  <!-- 🌸 Loading overlay -->
+  <!-- Loading overlay -->
   <div id="loading-overlay">
     <div class="loading-wrapper">
-      <div class="loading-icon"></div>
-      <div class="loading-text">Loading Lav’s Pixel World… 🌸</div>
+      <div class="loading-line"><span class="prompt">&gt;</span> booting portfolio<span class="cursor">_</span></div>
+      <div class="loading-bar"><span id="loading-bar-fill"></span></div>
     </div>
   </div>
 
-  <!-- 🌸 Falling flowers/hearts container -->
-  <div class="falling-flowers"></div>
+  <!-- Scroll progress trail -->
+  <div class="scroll-trail"><span id="scroll-trail-fill"></span></div>
 
-  <!-- 🌸 Main container -->
-  <div class="container">
-    <!-- Flower decorations -->
-    <img src="assets/flower1.jpg" class="flower flower1" alt="Flower1" />
-    <img src="assets/flower2.jpg" class="flower flower2" alt="Flower2" />
-    <img src="assets/flower3.jpg" class="flower flower3" alt="Flower3" />
+  <!-- Side file-tab nav -->
+  <nav class="file-nav" aria-label="Section navigation">
+    <div class="file-nav-title">EXPLORER</div>
+    <ul>
+      <li><a href="#hero" data-section="hero"><span class="dot"></span>hero.tsx</a></li>
+      <li><a href="#about" data-section="about"><span class="dot"></span>about.md</a></li>
+      <li><a href="#skills" data-section="skills"><span class="dot"></span>skills.json</a></li>
+      <li><a href="#experience" data-section="experience"><span class="dot"></span>experience.log</a></li>
+      <li><a href="#projects" data-section="projects"><span class="dot"></span>projects/</a></li>
+      <li><a href="#education" data-section="education"><span class="dot"></span>education.yaml</a></li>
+      <li><a href="#awards" data-section="awards"><span class="dot"></span>awards.txt</a></li>
+      <li><a href="#contact" data-section="contact"><span class="dot"></span>contact.sh</a></li>
+    </ul>
+  </nav>
 
-    <!-- Header -->
-    <div class="header">
-      <img src="assets/avatar.png" alt="Pixel Avatar" class="avatar" />
-      <h1>Lav’s portfolio</h1>
-      <p class="subtitle">Aspiring ML Engineer,Cs Undergraduate interested in ml and web dev</p>
-    </div>
+  <!-- Mobile bottom dot nav -->
+  <nav class="mobile-nav" aria-label="Section navigation mobile">
+    <a href="#hero" data-section="hero" class="mdot" aria-label="hero"></a>
+    <a href="#about" data-section="about" class="mdot" aria-label="about"></a>
+    <a href="#skills" data-section="skills" class="mdot" aria-label="skills"></a>
+    <a href="#experience" data-section="experience" class="mdot" aria-label="experience"></a>
+    <a href="#projects" data-section="projects" class="mdot" aria-label="projects"></a>
+    <a href="#education" data-section="education" class="mdot" aria-label="education"></a>
+    <a href="#awards" data-section="awards" class="mdot" aria-label="awards"></a>
+    <a href="#contact" data-section="contact" class="mdot" aria-label="contact"></a>
+  </nav>
 
-    <!-- Nav -->
-    <div class="nav">
-      <button data-section="about">about</button>
-      <button data-section="projects">projects</button>
-      <button data-section="skills">skills</button>
-      <button data-section="certificates">certificates</button>
-      <button data-section="education">education</button>
-      <button data-section="experience">experience</button>
-      <button data-section="contact">contact</button>
-      <button data-section="resume">resume</button>
-    </div>
+  <main class="page">
 
-    <!-- Content area -->
-    <div class="content">
-      <!-- Add your sections here exactly as you have them -->
-      <!-- ABOUT -->
-      <section id="about" class="section hidden">
-        <h2>About Me</h2>
-        <p>
-          Hey! I'm Lavanya — a Computer Science undergrad passionate about AIML and web dev.
-        </p>
-        <p>
-          I love building real-world tech: from a voice-controlled Arduino car that stops at red lights 🚗, to an AI model detecting spice adulteration using CNNs 🌶️.
-        </p>
-        <p>
-          Math, especially linear algebra and quantum physics, inspires me — shoutout to matrix magic and image pixels 📐🖼️.
-        </p>
-        <p>
-          I'm currently researching at PESU’s AI Lab-Centre for Cognitive and Computational Intelligence, exploring how AI blends with real-world logic.
-        </p>
-        <p>
-          Always curious. Always creating. Let’s build cool things together 🌸
-        </p>
-      </section>
-      
+    <!-- HERO -->
+    <section id="hero" class="section-block hero-block">
+      <div class="hero-grid reveal">
+        <div class="hero-copy">
+          <div class="file-tag">hero.tsx</div>
+          <img src="assets/avatar.png" alt="Portrait of Lavanya Senthil" class="avatar" />
+          <h1>Lavanya Senthil</h1>
+          <p class="subtitle">AI/ML Engineer in training — CSE (AIML), PES University</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Work</a>
+            <a href="assets/resume.pdf" download target="_blank" class="btn">Download Résumé</a>
+          </div>
+        </div>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="tdot r"></span><span class="tdot y"></span><span class="tdot g"></span>
+            <span class="terminal-title">whoami.sh</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">$</span> whoami</p>
+            <p class="out">Lavanya Senthil — B.Tech CSE (AIML), PES University</p>
+            <p><span class="prompt">$</span> cat focus.txt</p>
+            <p class="out">Multi-agent systems · deep learning · applied ML</p>
+            <p><span class="prompt">$</span> ls current/</p>
+            <p class="out">multi-cloud-anomaly-detection/  self-correcting-t2i/</p>
+            <p><span class="prompt">$</span> location</p>
+            <p class="out">Bangalore, India<span class="cursor">_</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint reveal" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
 
-      <!-- PROJECTS -->
-      <section id="projects" class="section hidden">
-        <h2>Projects</h2>
-        <ul>
-          <li><button class="project-btn" data-project="blossom">AI-Deep Learning Based Spice Adulteration Detector</button></li>
-          <li><button class="project-btn" data-project="beetask">Movie Booking Platform</button></li>
-          <li><button class="project-btn" data-project="honeydrop">Smart Voice-Controlled Car – Arduino,</button></li>
-        </ul>
-      </section>
+    <!-- ABOUT -->
+    <section id="about" class="section-block">
+      <div class="file-tag reveal">about.md</div>
+      <div class="content-card reveal">
+        <h2>About</h2>
+        <p>I'm a Computer Science undergraduate at PES University, specializing in AI &amp; Machine Learning, with hands-on experience building systems that range from repository-aware multi-agent tooling to real-time anomaly detection across large-scale infrastructure.</p>
+        <p>Most recently, I worked as an AI/ML Intern with AVEVA's R&amp;D team, where I helped design a multi-agent architecture for automatically generating compilable unit tests across an enterprise-scale C#/.NET codebase. Before that, I was a research intern at PES University's Centre for Cognitive and Computational Intelligence, developing a CNN-based system for detecting spice adulteration from images.</p>
+        <p>I'm currently building a self-supervised anomaly detection platform for cloud infrastructure as my capstone project, and I stay engaged with research at the intersection of graph neural networks, vision-language models, and applied ML systems.</p>
+        <p>I'm always open to collaborating on ambitious, well-scoped ML and systems work.</p>
+      </div>
+    </section>
 
-      <!-- Project Details -->
-      <section id="blossom" class="section hidden">
-        <h2><b>AI-Based Visual Detection of Spice Adulteration Using Deep Learning (Ongoing)</b></h2>
-
-        <p>Building an AI-powered system to detect spice adulteration (e.g., turmeric, chili) using CNNs and transfer
-          learning (ResNet-50, MobileNetV2). Conducting data cleaning, labeling, and EDA on RGB image datasets with
-          adulteration levels. Supporting model training, augmentation, and evaluation; achieving over 90% validation
-          accuracy. Assisting in model optimization and mobile deployment using knowledge distillation.</p>
-        <button class="back-btn">⬅️ Back to Projects</button>
-      </section>
-
-      <section id="beetask" class="section hidden">
-        <h2><b>Movie Booking Platform –</b> Python, MySQL, Tkinter</h2>
-        <p>Developed a BookMyShow-inspired ticket booking system with a responsive UI using Python Tkinter.
-          Implemented seat selection and fast search functionality via trie trees. Managed dynamic bookings and
-          movie data using MySQL queries. Integrated QR code generation for simulated payment and ticket
-          confirmation.</p>
-        <button class="back-btn">⬅️ Back to Projects</button>
-      </section>
-
-      <section id="honeydrop" class="section hidden">
-        <h2><b>Smart Voice-Controlled Car – Arduino, C/C++</b></h2>
-        <p>Designed a dual-mode robotic car operable via voice commands and manual joystick controls through a
-          Bluetooth-connected mobile app. Enabled directional movement, real-time obstacle avoidance using ultrasonic
-          sensors, and automatic halting at red traffic lights using LDR-based detection. Simulated real-world RC vehicle
-          behavior with both user control and autonomous safety features.</p>
-        <button class="back-btn">⬅️ Back to Projects</button>
-      </section>
-
-      <!-- SKILLS -->
-      <section id="skills" class="section hidden">
+    <!-- SKILLS -->
+    <section id="skills" class="section-block">
+      <div class="file-tag reveal">skills.json</div>
+      <div class="content-card reveal">
         <h2>Skills</h2>
-        <ul>
-          <li>💻 <b>Languages:</b> C, Java, Python, JavaScript, HTML, CSS, SQL</li>
-          <li>⚙️ <b>Technologies & Tools:</b> ReactJS, OpenCV,pandas,numpy,keras,tensorflow,pytorch</li>
-          <li>🎨 <b>Design:</b> UI/UX,Canva</li>
-        </ul>
-      </section>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Programming Languages</h3>
+            <div class="chip-row">
+              <span class="chip">Python</span><span class="chip">C</span><span class="chip">Java</span><span class="chip">JavaScript</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Frameworks &amp; Libraries</h3>
+            <div class="chip-row">
+              <span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Keras</span>
+              <span class="chip">scikit-learn</span><span class="chip">NumPy</span><span class="chip">pandas</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Databases</h3>
+            <div class="chip-row">
+              <span class="chip">MySQL</span><span class="chip">MongoDB</span><span class="chip">Neo4j</span><span class="chip">Vector Databases</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Tools &amp; Platforms</h3>
+            <div class="chip-row">
+              <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Docker</span>
+              <span class="chip">AWS</span><span class="chip">CI/CD</span><span class="chip">Jira</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <!-- CERTIFICATES -->
-      <section id="certificates" class="section hidden">
-        <h2>Certificates and Awards</h2>
-        <ul>
-          <li>1. <strong>CNR Award</strong> — Top 20% in the department, 40% off on all semesters</li>
-          <li>2.<strong>AI Fundamentals Course</strong> — Free Code Camp</li>
-          <li>3. <strong>Deep Learning Course</strong> — Codebasics</li>
-        </ul>
-      </section>
-      
-
-      <!-- EDUCATION -->
-      <section id="education" class="section hidden">
-        <h2>Education</h2>
-      
-        <div class="edu-entry">
-          <button class="edu-btn">
-            <b>🎓 B.E. in Computer Science — PES University, Bangalore</b><br/>
-            <small>CGPA: 8.7</small><br/>
-            <a href="assets/PES_GPA_Certificate.pdf" target="_blank" download>📄 View CGPA Certificate</a>
-          </button>
-        </div>
-      
-        <div class="edu-entry">
-          <button class="edu-btn">
-            <b>🧪 12th Grade (PCMC - CBSE) — Delhi Public School, Bangalore</b><br/>
-            Grade: 93% | JEE Percentile: 93%<br/>
-            <a href="assets/DPS_12th_Certificate.pdf" target="_blank" download>📄 View 12th Grade Certificate</a><br/>
-            <a href="assets/JEE_Percentile_Certificate.pdf" target="_blank" download>📄 View JEE Percentile Certificate</a>
-          </button>
-        </div>
-      
-        <div class="edu-entry">
-          <button class="edu-btn">
-            <b>🏫 10th Grade (ICSE) — Baldwin Girls’ High School, Bangalore</b><br/>
-            <small>Grade: 97.8%</small><br/>
-            <a href="assets/Baldwin_10th_Certificate.pdf" target="_blank" download>📄 View Certificate</a>
-          </button>
-        </div>
-      </section>
-      
-      
-          
-        </div>
-        
-        
-      </section>
-
-      <!-- EXPERIENCE -->
-      <section id="experience" class="section hidden">
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section-block">
+      <div class="file-tag reveal">experience.log</div>
+      <div class="content-card reveal">
         <h2>Experience</h2>
-        <div class="pretty-box">
-          <ul>
-            <li>
-              <strong>1.Research Intern</strong> — Centre for Cognitive and Computational Intelligence (AI Research Lab)
-            </li>
-            <li>
-              <strong>2.Logistics Executive</strong> — PESU I/O
-            </li>
-          </ul>
+        <ul class="timeline">
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-head">
+              <strong>AI/ML Intern</strong> — AVEVA R&amp;D, E3D Team
+              <span class="timeline-date">Jun 2026 – Jul 2026 · On-site, Hyderabad</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Designed a repository-aware multi-agent AI system to auto-generate compilable C#/.NET unit tests for enterprise-scale codebases.</li>
+              <li>Adopted a 6-agent architecture with isolated context per agent, improving output consistency from 20% to 35% coverage across the pipeline.</li>
+            </ul>
+            <div class="tag-row"><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">Agents</span></div>
+          </li>
+          <li>
+            <span class="timeline-dot"></span>
+            <div class="timeline-head">
+              <strong>AI/ML Research Intern</strong> — C3I (ML Lab), PES University
+              <span class="timeline-date">Jun 2025 – Aug 2025 · On-site, Bangalore</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Designed and implemented a deep learning system for visual detection of spice adulteration using CNNs.</li>
+              <li>Improved classification accuracy through preprocessing and model optimization techniques.</li>
+            </ul>
+            <div class="tag-row"><span class="tag">CNN</span><span class="tag">ResNet</span><span class="tag">Deep Learning</span><span class="tag">FastAPI</span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section-block">
+      <div class="file-tag reveal">projects/</div>
+      <div class="content-card reveal">
+        <h2>Projects</h2>
+        <div class="project-list">
+
+          <div class="project-item">
+            <button class="project-toggle" aria-expanded="false">
+              <span class="project-title">Multi-Cloud Behavioral Anomaly Detection Platform</span>
+              <span class="project-meta">Capstone · Ongoing</span>
+              <span class="project-caret">▸</span>
+            </button>
+            <div class="project-panel">
+              <div class="project-panel-inner">
+                <p>Built a real-time platform to detect and prioritize anomalous behavior across 50,000+ cloud infrastructure metrics, helping IT teams focus on critical alerts and identify root causes faster.</p>
+                <div class="tag-row"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Kafka</span><span class="tag">FAISS</span><span class="tag">Redis</span><span class="tag">Neo4j</span><span class="tag">FastAPI</span><span class="tag">Self-Supervised ML</span><span class="tag">AWS</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <button class="project-toggle" aria-expanded="false">
+              <span class="project-title">AI-Based Visual Detection of Spice Adulteration</span>
+              <span class="project-meta">Jun 2025 – Aug 2025</span>
+              <span class="project-caret">▸</span>
+            </button>
+            <div class="project-panel">
+              <div class="project-panel-inner">
+                <p>Developed a CNN-based system to detect spice adulteration from a single smartphone image, enabling assessment without specialized equipment. Achieved a ~99% F1 score across 10,000+ images.</p>
+                <div class="tag-row"><span class="tag">CNN</span><span class="tag">Transfer Learning</span><span class="tag">OpenCV</span><span class="tag">FastAPI</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <button class="project-toggle" aria-expanded="false">
+              <span class="project-title">Drug-Likeness Prediction using Feature-Enriched GNNs</span>
+              <span class="project-meta">Jan 2025 – May 2025</span>
+              <span class="project-caret">▸</span>
+            </button>
+            <div class="project-panel">
+              <div class="project-panel-inner">
+                <p>Built a graph neural network to predict drug-likeness by combining molecular structure with global chemical properties, helping prioritize promising drug candidates for early-stage screening. Achieved 0.927 ROC-AUC and 0.935 F1 — a 2.6% gain over a structure-only baseline.</p>
+                <div class="tag-row"><span class="tag">PyTorch Geometric</span><span class="tag">RDKit</span><span class="tag">Python</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <button class="project-toggle" aria-expanded="false">
+              <span class="project-title">Self-Correcting Text-to-Image Generation via Scene Graph-Grounded VQA</span>
+              <span class="project-meta">Feb 2026 – Apr 2026</span>
+              <span class="project-caret">▸</span>
+            </button>
+            <div class="project-panel">
+              <div class="project-panel-inner">
+                <p>Built a self-correcting text-to-image system to reduce semantic mismatches between prompts and generated images, using scene graphs and visual question answering.</p>
+                <div class="tag-row"><span class="tag">LLMs</span><span class="tag">VLMs</span></div>
+              </div>
+            </div>
+          </div>
+
         </div>
-      </section>
-      
+      </div>
+    </section>
 
-      <!-- CONTACT -->
-      <section id="contact" class="section hidden">
+    <!-- EDUCATION -->
+    <section id="education" class="section-block">
+      <div class="file-tag reveal">education.yaml</div>
+      <div class="content-card reveal">
+        <h2>Education</h2>
+
+        <div class="edu-entry">
+          <div class="edu-head">
+            <b>B.Tech in Computer Science &amp; Engineering (AIML)</b>
+            <span class="edu-score">8.58 / 10 CGPA</span>
+          </div>
+          <span class="edu-sub">PES University, Bangalore · Aug 2023 – 2027</span>
+        </div>
+
+        <div class="edu-entry">
+          <div class="edu-head">
+            <b>XII, CBSE</b>
+            <span class="edu-score">91.2%</span>
+          </div>
+          <span class="edu-sub">Delhi Public School · Jun 2021 – 2023</span>
+        </div>
+
+        <div class="edu-entry">
+          <div class="edu-head">
+            <b>X, ICSE</b>
+            <span class="edu-score">97.6%</span>
+          </div>
+          <span class="edu-sub">Baldwin Girls' High School · Jun 2009 – 2021</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section id="awards" class="section-block">
+      <div class="file-tag reveal">awards.txt</div>
+      <div class="content-card reveal">
+        <h2>Awards &amp; Achievements</h2>
+        <ul class="cert-list">
+          <li><strong>CNR Scholarship</strong> — Awarded to the top 20% of students; 4× recipient</li>
+          <li><strong>1st Prize, Kepler's Habitability Datathon</strong> — First place in a data science competition on planetary habitability</li>
+          <li><strong>JEE Main</strong> — 93.3 percentile, national-level engineering entrance examination</li>
+          <li><strong>Academic Excellence Award</strong> — Baldwin Girls' High School; 97.6% in Class X boards</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-block contact-block">
+      <div class="file-tag reveal">contact.sh</div>
+      <div class="content-card reveal">
         <h2>Contact</h2>
-        <p>📧 Email: <a href="mailto:lavanya.senthil1104@gmail.com">lavanya.senthil1104@gmail.com</a></p>
-        <p>📱 Phone: <a href="tel:+919535171980">+91 9535171980</a></p>
-        <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/lavanya-senthil-07aa87244/" target="_blank">View my profile</a></p>
-      </section>
+        <div class="terminal terminal-contact">
+          <div class="terminal-bar">
+            <span class="tdot r"></span><span class="tdot y"></span><span class="tdot g"></span>
+            <span class="terminal-title">contact.sh</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">$</span> email</p>
+            <p class="out"><a href="mailto:lavanya.senthil1104@gmail.com">lavanya.senthil1104@gmail.com</a></p>
+            <p><span class="prompt">$</span> phone</p>
+            <p class="out"><a href="tel:+919535171980">+91 95351 71980</a></p>
+            <p><span class="prompt">$</span> linkedin</p>
+            <p class="out"><a href="https://www.linkedin.com/in/lavanya-senthil-07aa87244/" target="_blank">linkedin.com/in/lavanya-senthil</a></p>
+            <p><span class="prompt">$</span> github</p>
+            <p class="out"><a href="https://github.com/lavlovesgit" target="_blank">github.com/lavanyasenthil</a></p>
+            <p><span class="prompt">$</span> resume --download</p>
+            <p class="out"><a href="assets/resume.pdf" download target="_blank">Lavanya_Senthil_Resume.pdf</a><span class="cursor">_</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section id="resume" class="section hidden">
-        <h2>Resume</h2>
-        <p>You can download my resume here:</p>
-        <p>
-          📄 <a href="assets/Lavanya_senthil_resume_updated.pdf" download target="_blank">
-            Download My Resume (PDF)
-          </a>
-        </p>
-      </section>
-      
-    </div>
-  </div>
-
-  <!-- Audio -->
-  <audio id="bg-music" src="assets/bg.mp3" ></audio>
-  <audio id="click-sound" src="assets/click.mp3"></audio>
-  <audio id="bg-music" src="assets/bg.mp3" loop></audio>
-
+  </main>
 
   <script src="portfolio.js"></script>
 </body>
